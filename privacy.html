@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JIASIN 個人自動化的 Gmail 資料存取、用途、第三方處理、保存及撤銷授權說明。">
+  <title>隱私權政策 | JIASIN 個人自動化</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><img src="https://avatars.githubusercontent.com/u/280607786?v=4" width="36" height="36" alt="" referrerpolicy="no-referrer"><span>JIASIN開發</span></a>
+    <nav aria-label="主要導覽"><a href="./">工具介紹</a><a href="privacy.html" aria-current="page">隱私權政策</a><a href="terms.html">使用條款</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">JIASIN 個人自動化</p>
+      <h1>隱私權政策</h1>
+      <p class="updated">生效及更新日期：2026 年 10 月 14 日</p>
+      <p>本政策說明 JIASIN 個人自動化透過 n8n 與 Google API 處理個人 Gmail 資料的方式。工具由 JIASIN 維護，僅供帳戶擁有者個人使用。</p>
+    </section>
+    <section>
+      <h2>存取的資料</h2>
+      <p>經 Google OAuth 授權後，啟用的流程可取得 Gmail 郵件與對話串識別碼、標籤、已讀狀態、收到時間、主旨、寄件者及郵件文字內容。實際取得的資料取決於啟用流程及 Gmail API 的回傳內容；流程執行紀錄也可能包含回傳的郵件資料。</p>
+      <p>OAuth 存取權杖與更新權杖由 n8n 憑證機制管理，用來維持授權連線。本網站不要求提供 Google 密碼，也不公開 OAuth 憑證或郵件資料。</p>
+    </section>
+    <section>
+      <h2>資料用途</h2>
+      <ul>
+        <li>檢查登入通知的本地收到時間，將符合規則的未讀通知標記為已讀。</li>
+        <li>啟用 AI 郵件分類時，分析廣告與時限資訊，依規則調整已讀狀態或自訂標籤。</li>
+        <li>透過執行紀錄確認流程結果、排查錯誤及維護自動化。</li>
+      </ul>
+      <p>資料僅用於帳戶擁有者設定的郵件自動化功能。本工具不販售 Gmail 資料，不用於廣告投放，也不將 Google 使用者資料用於建立、訓練或改善通用人工智慧或機器學習模型。</p>
+    </section>
+    <section>
+      <h2>第三方服務與分享</h2>
+      <p>郵件資料經由 Google API 傳送到帳戶擁有者管理的 n8n 環境，並由其主機服務提供者提供運算與儲存基礎設施。</p>
+      <p>登入通知時間檢查流程不使用 AI。啟用 AI 郵件分類流程時，郵件文字及分類所需資訊會傳送至 OpenAI API，僅為完成該分類功能。第三方依其服務條款、隱私政策及帳戶設定處理資料，可能涉及跨境處理。</p>
+      <p>本網站由 GitHub Pages 提供託管；網站請求可能由 GitHub 記錄 IP 位址等技術資訊。導覽列圖片由 GitHub 頭像服務提供，會產生圖片載入請求。本網站不嵌入廣告、分析工具或 Gmail 資料。</p>
+      <p>服務政策：<a href="https://policies.google.com/privacy">Google</a>、<a href="https://openai.com/policies/privacy-policy/">OpenAI</a>、<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub</a>。</p>
+    </section>
+    <section>
+      <h2>保存與保護</h2>
+      <p>原始郵件保留在 Gmail。n8n 可能保存執行輸入、輸出與錯誤紀錄，包括郵件文字；保存期限依 n8n 的執行紀錄、清理與備份設定決定。本政策不宣稱郵件資料只在記憶體處理或會立即刪除。</p>
+      <p>維護者應限制 n8n、主機及備份的存取權，使用 HTTPS 連線，並妥善保護憑證。公開的 GitHub 儲存庫僅放置工具介紹與政策網頁，不放置郵件、帳戶權杖或流程執行紀錄。</p>
+    </section>
+    <section>
+      <h2>停止使用、撤銷與刪除</h2>
+      <p>帳戶擁有者可停用 n8n 流程，並在 <a href="https://myaccount.google.com/connections">Google 帳戶第三方連線設定</a>撤銷授權，以停止後續 Gmail 存取。</p>
+      <p>撤銷授權不會自動刪除已保存的 n8n 紀錄。停止使用時，可另行刪除 n8n Gmail 憑證、流程執行紀錄及相關備份；第三方服務已保存的資料需依其提供的方式處理。處理期間所做的已讀或標籤變更也不會因撤銷授權自動還原。</p>
+    </section>
+    <section>
+      <h2>Google API 使用承諾與政策更新</h2>
+      <p>JIASIN 個人自動化對 Google API 所取得資訊的使用與轉移，遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>，包括 Limited Use（有限用途）要求。</p>
+      <p>若新增功能、第三方服務或資料用途，維護者應在啟用前更新本政策，並取得必要授權。本頁標示最新更新日期。</p>
+      <p>維護者：JIASIN<br>政策、存取及刪除問題：<a href="mailto:ftn7303@gmail.com">ftn7303@gmail.com</a></p>
+    </section>
+  </main>
+  <footer><span>JIASIN開發</span><a href="./">工具介紹</a><a href="terms.html">使用條款</a></footer>
+</body>
+</html>

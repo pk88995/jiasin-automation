@@ -1,0 +1,41 @@
+:root { color-scheme: light; --ink: #172b26; --muted: #52615b; --line: #dce4e0; --accent: #17694c; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; color: var(--ink); font-family: system-ui, -apple-system, "Noto Sans TC", sans-serif; font-size: 16px; line-height: 1.85; letter-spacing: 0; }
+a { color: var(--accent); text-underline-offset: 4px; overflow-wrap: anywhere; }
+a:hover { color: #0d4731; }
+a:focus-visible { outline: 3px solid #d8a334; outline-offset: 5px; }
+.site-header, main, footer { width: min(100% - 48px, 960px); margin-inline: auto; }
+.site-header { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding-block: 22px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 750; text-decoration: none; }
+.brand img { width: 36px; height: 36px; border-radius: 6px; object-fit: cover; }
+nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
+nav a { color: var(--muted); text-decoration: none; }
+nav a[aria-current] { color: var(--accent); text-decoration: underline; font-weight: 650; }
+main { max-width: 800px; }
+section { padding-block: 32px; border-bottom: 1px solid var(--line); }
+section:last-child { border-bottom: 0; }
+.intro { padding-top: 52px; }
+.eyebrow, .updated { color: var(--muted); font-size: 14px; }
+.eyebrow { margin: 0 0 12px; }
+h1 { font-size: 36px; line-height: 1.35; margin: 0 0 20px; overflow-wrap: anywhere; }
+h2 { font-size: 22px; line-height: 1.5; margin: 0 0 16px; }
+p { margin: 0 0 16px; }
+p:last-child { margin-bottom: 0; }
+.lead { font-size: 19px; line-height: 1.8; }
+ul { padding-left: 24px; margin-block: 0 16px; }
+li { margin-bottom: 8px; }
+.rules { margin-block: 20px; }
+.rules > div { display: grid; grid-template-columns: 190px 1fr; gap: 12px; padding-block: 14px; border-top: 1px solid var(--line); }
+dt { font-weight: 650; }
+dd { margin: 0; }
+footer { display: flex; flex-wrap: wrap; gap: 12px 24px; padding-block: 28px; border-top: 1px solid var(--line); font-size: 14px; color: var(--muted); }
+footer span { margin-right: auto; }
+@media (max-width: 600px) {
+  .site-header, main, footer { width: calc(100% - 36px); }
+  .site-header { align-items: flex-start; gap: 14px; }
+  nav { width: 100%; gap: 18px; }
+  .intro { padding-top: 32px; }
+  h1 { font-size: 28px; }
+  .lead { font-size: 17px; }
+  .rules > div { grid-template-columns: 1fr; gap: 4px; }
+}

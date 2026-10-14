@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JIASIN 個人自動化：使用 n8n 與 Gmail API 處理個人郵件，提供工具介紹、隱私權政策與聯絡資訊。">
+  <title>JIASIN 個人自動化</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./"><img src="https://avatars.githubusercontent.com/u/280607786?v=4" width="36" height="36" alt="" referrerpolicy="no-referrer"><span>JIASIN開發</span></a>
+    <nav aria-label="主要導覽"><a href="./" aria-current="page">工具介紹</a><a href="privacy.html">隱私權政策</a><a href="terms.html">使用條款</a></nav>
+  </header>
+  <main>
+    <section class="intro">
+      <p class="eyebrow">個人使用 / 郵件自動化</p>
+      <h1>JIASIN 個人自動化</h1>
+      <p class="lead">由 JIASIN 維護的個人 n8n 自動化工具，透過 Google OAuth 授權連接自己的 Gmail 帳戶，執行已設定的郵件整理流程。</p>
+      <p>本網站公開介紹工具用途與資料處理方式。自動化流程在帳戶擁有者管理的 n8n 環境中執行，網站本身不提供 Gmail 登入或收集郵件。</p>
+    </section>
+    <section>
+      <h2>登入通知檢查</h2>
+      <p>每日早上 08:00，依 Asia/Taipei 時區檢查帶有「登入通知」標籤的郵件。流程根據收到時間、標籤及未讀狀態，判斷是否標記為已讀。</p>
+      <dl class="rules">
+        <div><dt>02:00 至 04:00 前</dt><dd>符合檢查條件的未讀登入通知標記為已讀。</dd></div>
+        <div><dt>其他收到時間</dt><dd>保留郵件原本狀態，供帳戶擁有者自行確認。</dd></div>
+        <div><dt>信件與標籤</dt><dd>此登入通知流程不封存、不刪除郵件，也不新增或移除自訂標籤。</dd></div>
+      </dl>
+      <p>這是依時間設定的整理規則，並非登入安全驗證；在指定時間內收到通知，不代表該次登入已確認安全。</p>
+    </section>
+    <section>
+      <h2>AI 郵件分類</h2>
+      <p>帳戶擁有者啟用 AI 郵件分類流程時，n8n 會將郵件文字送至 OpenAI API，協助判斷廣告與時限資訊。流程依設定標記符合條件的廣告為已讀，並為有時限的郵件加上待確認標籤。</p>
+      <p>AI 判斷可能有誤，重要通知仍需自行核對。第三方資料處理與執行紀錄的說明，請見<a href="privacy.html">隱私權政策</a>。</p>
+    </section>
+    <section>
+      <h2>授權與聯絡</h2>
+      <p>工具僅供帳戶擁有者個人使用。Gmail 存取需經 Google OAuth 明確授權；可隨時在 <a href="https://myaccount.google.com/connections">Google 帳戶的第三方連線設定</a>撤銷存取權。</p>
+      <p>維護者：JIASIN<br>聯絡信箱：<a href="mailto:ftn7303@gmail.com">ftn7303@gmail.com</a></p>
+    </section>
+  </main>
+  <footer><span>JIASIN開發</span><a href="privacy.html">隱私權政策</a><a href="terms.html">使用條款</a></footer>
+</body>
+</html>
